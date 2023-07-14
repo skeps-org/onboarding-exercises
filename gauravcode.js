@@ -1,3 +1,4 @@
+
 function add(A, B) {
 
     const AL = A.length
@@ -47,5 +48,3 @@ function add(A, B) {
   B= "33524135867384"
 
   console.log(add(A,B))
-
-  // checking pls
