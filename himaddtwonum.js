@@ -47,3 +47,5 @@ function add(A, B) {
   B= "33524135867384"
 
   console.log(add(A,B))
+
+  // checking pls
