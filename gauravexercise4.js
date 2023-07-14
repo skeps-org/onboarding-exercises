@@ -4,25 +4,15 @@ const students = [
     { name: 'Charlie', age: 19, grades: [90, 88, 94] },
     { name: 'David', age: 18, grades: [72, 68, 78] },
   ];
-  
-  myFunction(students);
-  
-  function myFunction(students) {
-      var ans=[];
-      for(var ind=0;ind<students.length;ind++){
-          var arr=students[ind].grades;
-          var sum=0;
-          for(var j=0;j<arr.length;j++){
-              sum+=arr[j];
-          }
-          var kp={
-              "name":students[ind].name,
-              "averageGrade":sum/arr.length
-          }
-          if(students[ind].age>=18 && sum>=70){
-              ans.push(kp);
-          }
-    }
-    console.log(ans);
-    return ans;
-  }
+
+  const arr1= students.filter(v=>(v.age>=18));
+  const arr2=arr1.map(v=>{
+    var temp1=v.grades;
+    const temp2=temp1.reduce((a,b)=>(a+b));
+
+    v.grades=temp2/3;
+    return v;
+
+  })
+
+  console.log(arr2);
